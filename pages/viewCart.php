@@ -27,7 +27,8 @@ require_once '../handler/CartHandler.php';
                     </thead>
                     <tbody>
                         <?php
-                        $total =0;
+                        $total = 0;
+                        $rowNum = 1;
                         foreach ($_SESSION['shopping_cart'] as $key => $value) {
                             $result = getFoodItemData($value['food_item_id']);
                             //var_dump($result);
@@ -36,21 +37,27 @@ require_once '../handler/CartHandler.php';
                         ?>
                                 <tr>
                                     <td scope="col"></td>
-                                    <td scope="col"><?php echo $row['food_item_image'];?></td>
+                                    <td scope="col"><img src="../../pastry_shop_mng_sys/images/foodItem-images/<?php echo $row['food_item_image']; ?>" alt="" width="70px" height="70px"></td>
                                     <td scope="col"><?php echo $row['food_item_name']; ?></td>
-                                    <td scope="col"><?php echo $row['food_item_unit_price'];?></td>
-                                    <td scope="col"><?php echo $value['item_qty'];?></td>
-                                    <td scope="col"><?php echo $subTotal;?></td>
+                                    <td scope="col" id="unit_price_<?php echo $rowNum ?>"><?php echo $row['food_item_unit_price']; ?></td>
+                                    <td>
+                                        <div class="input-group mb-3" style="width: 50%;">
+                                            <button class="input-group-text" onclick="increase(<?php echo $rowNum ?>)" id="increaseBtn_<?php echo $rowNum ?>">+</button>
+                                            <input type="text" id="quantity_<?php echo $rowNum ?>" class="form-control" style="width: 8px;" readonly value="<?php echo $value['item_qty']; ?>">
+                                            <button class="input-group-text" onclick="decrease(<?php echo $rowNum ?>)" id="decreaseBtn_<?php echo $rowNum ?>">-</button>
+                                        </div>
+                                    </td>
+                                    <td scope="col" id="subTotal_<?php echo $rowNum ?>"><?php echo $subTotal; ?>.00</td>
                                 </tr>
-
                         <?php
-                        $total += $subTotal;
+                        $rowNum++;
+                                $total += $subTotal;
                             }
                         }
                         ?>
                         <tr>
                             <td colspan="5" class="text-end">Total</td>
-                            <td><?php echo $total;?> </td>
+                            <td  id="total"><?php echo $total; ?>.00 </td>
                         </tr>
                     </tbody>
                 </table>
@@ -64,9 +71,12 @@ require_once '../handler/CartHandler.php';
             <?php
             }
             ?>
-
+        <div>
+            <a type="button" class="btn btn-dark float-end" href="../pages/checkout.php">Checkout</a>
         </div>
-    </div>
+        </div>
+        
+    </div>    
 </section>
 <?php
 require_once '../pages/footer.php';

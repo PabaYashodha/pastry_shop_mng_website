@@ -16,6 +16,8 @@ $(document).ready(function () {
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
     }
+    
+ 
 })
 let addToCart = (Id)=>{
     $.post("../pages/sessionAction.php?addToCart",{foodItemId : Id},function(params) {
@@ -34,4 +36,34 @@ let addToCart = (Id)=>{
             $('#foodItemCountInCart').html(1).show;
         }
     },'json')
+}
+
+//increase item quantity
+   let increase = (x) => {
+    let quantity = +$('#quantity_'+x).val();
+    let unitPrice = parseFloat($('#unit_price_'+x).text());
+    let total = parseFloat($('#total').text());
+    let increasedQuantity =  quantity+1;
+    $('#quantity_'+x).val(increasedQuantity);
+    let subTotal = increasedQuantity * unitPrice;
+    $('#subTotal_'+x).text(subTotal.toFixed(2));
+     total = total + unitPrice;
+   $('#total').text(total.toFixed(2));
+};
+
+//decrease item quantity
+let decrease = (x)=>{
+    let quantityVal = +$('#quantity_'+x).val();
+    let unitPrice =parseFloat($('#unit_price_'+x).text());
+    let total = parseFloat($('#total').text());
+    let decreaseQuantity = quantityVal-1;
+    if (decreaseQuantity<1) {
+        return false;
+    }else{
+        $('#quantity_'+x).val(decreaseQuantity);
+        let subTotal = decreaseQuantity * unitPrice;
+        $('#subTotal_'+x).text(subTotal.toFixed(2));
+        total = total- unitPrice;
+        $('#total').text(total.toFixed(2));
+    }
 }
