@@ -19,6 +19,8 @@ $(document).ready(function () {
     
  
 })
+
+
 let addToCart = (Id)=>{
     $.post("../pages/sessionAction.php?addToCart",{foodItemId : Id},function(params) {
         if (params==1) {

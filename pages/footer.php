@@ -28,7 +28,28 @@
         </div>
     </div>
 </div>
+<?php
+require_once '../pages/scriptInclude.php';
+//display a success or error message using toastr that come from session
+if (isset($_SESSION['notify'])) {
+if ($_SESSION['notify']["type"]=="Success") {
+?>
+<script>
+    toastr.success("<?php echo $_SESSION['notify']["msg"] ?>");
+</script>
+<?php
+ unset($_SESSION['notify']);
+}else{
+    ?>
+<script>
+    toastr.error("<?php echo $_SESSION['notify']["msg"] ?>");
+</script>
+<?php
+ unset($_SESSION['notify']);
+}
+}
+
+?>
 
 </body>
-
 </html>

@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav mx-auto">
                     <a class="nav-item nav-link px-5" href="../pages/index.php">HOME</a>
-                    <a class="nav-item nav-link px-5" href="#">MENU</a>
+                    <a class="nav-item nav-link px-5" href="#menu">MENU</a>
                     <a class="nav-item nav-link px-5" href="#">CONTACT US</a>
                     <a class="nav-item nav-link px-5" href="#">ORDER ONLINE</a>
                     <a class="nav-item nav-link px-5 position-relative" href="viewCart.php"><i class="far fa-shopping-cart"></i>
@@ -30,7 +31,7 @@
                             <div id="foodItemCountInCart">
                                 <?php  
 
-                                    session_start();
+                                    // session_start();
                                 if(isset($_SESSION['shopping_cart'])) {
                                     echo count($_SESSION['shopping_cart']);
                                 } else{ echo '0'; }

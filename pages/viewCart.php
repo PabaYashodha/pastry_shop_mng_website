@@ -3,9 +3,9 @@ require_once '../pages/header.php';
 require_once '../handler/CartHandler.php';
 ?>
 <section style="min-height: 100vh;">
-    <div class="card" style="border: none;">
+    <div class="card" style="border: none; margin-top: 60px;">
         <div class="card-body cart-header" style="border: none;">
-            <h2 style="text-align: center;">MR.PAAN</h2>
+            <h2 class="text-center">MR.PAAN</h2>
         </div>
     </div>
 
@@ -61,6 +61,10 @@ require_once '../handler/CartHandler.php';
                         </tr>
                     </tbody>
                 </table>
+                <div>
+            <a type="button" class="btn btn-dark float-end" href="../pages/checkout.php">Checkout</a>
+        </div>
+        </div>
             <?php
             } else {
             ?>
@@ -71,10 +75,7 @@ require_once '../handler/CartHandler.php';
             <?php
             }
             ?>
-        <div>
-            <a type="button" class="btn btn-dark float-end" href="../pages/checkout.php">Checkout</a>
-        </div>
-        </div>
+        
         
     </div>    
 </section>

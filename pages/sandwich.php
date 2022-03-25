@@ -7,32 +7,6 @@ $sandwichObj = new sandwich();
 // session_start();
 print_r($_SESSION['shopping_cart']);
 // unset($_SESSION['shopping_cart']);
-//add items to the shopping cart
-// if (isset($_SESSION["shopping_cart"])) {
-//     $item_array_id=array_column($_SESSION["shopping_cart"],"food_item_id");
-//     if (!in_array($_GET["food_item_id"],$item_array_id)) {
-//         $count = count($_SESSION["shopping_cart"]);
-//         $item_array=array(
-//             'food_item_id'=>$_GET["id"],
-//             'food_item_name'=>$_POST["hidden_name"],
-//             'food_item_unit_price'=>$_POST["hidden_price"],
-//             'food_ite_quantity'=>$_POST["quantity"],
-//         );
-//         $_SESSION["shopping_cart"][$count]= $item_array;
-//         echo '<script>window.location=".php"</script>';
-//     }else{
-//         echo '<script>alert("Product is already is in the cart)</script>';
-//         echo '<script>window.location="sandwich.php"</script>';
-//     }
-// }else{
-//     $item_array=array(
-//         'food_item_id'=>$_GET["id"],
-//         'food_item_name'=>$_POST["hidden_name"],
-//         'food_item_unit_price'=>$_POST["hidden_price"],
-//         'food_ite_quantity'=>$_POST["quantity"],
-//     );
-//     $_SESSION["shopping_cart"][0]=$item_array;
-// }
 
 ?>
 <section style="min-height: 100vh;">
