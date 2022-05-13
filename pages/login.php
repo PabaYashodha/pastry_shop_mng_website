@@ -1,8 +1,7 @@
 <?php
 require_once '../pages/header.php';
-
 ?>
-<section style="min-height: 100vh;">
+<section style="height:400px;">
     <div class="container p-o" style="margin-top: 100px;">
         <div class="row">
             <div class="col-sm-6">
@@ -25,23 +24,23 @@ require_once '../pages/header.php';
                     </div>
                 </form>
             </div>
-
+            <div class=" col-sm-1 vl"></div>
             <div class="col-sm-6">
-            <form action="../handler/LoginHandler.php?status=sendOTP" method="post" role="form">
-                <div class="card " style="border: none;">
-                    <div class="card-body">
-                        <h2 class="text-center" style="font-family: 'Lobster', cursive; color:#e69284;">...Register...</h2>
-                        <div class="mb-3">
-                            <!-- <label for="username" class="form-label">Username</label> -->
-                            <input type="email" class="form-control rounded-pill" id="customerContact" name="customerContact" placeholder="email">
-                        </div>
+                <form action="../handler/LoginHandler.php?status=sendOTP" method="post" role="form">
+                    <div class="card " style="border: none;">
+                        <div class="card-body">
+                            <h2 class="text-center" style="font-family: 'Lobster', cursive; color:#e69284;">...Register...</h2>
+                            <div class="mb-3">
+                                <!-- <label for="username" class="form-label">Username</label> -->
+                                <input type="email" class="form-control rounded-pill" id="customerContact" name="customerContact" placeholder="email">
+                            </div>
 
-                        <div class="d-grid">
-                            <button class="btn rounded-pill text-dark" style="background-color:#e69284 ;" type="submit">Send</button>
+                            <div class="d-grid">
+                                <button class="btn rounded-pill text-dark" style="background-color:#e69284 ;" type="submit">Send</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
             </div>
         </div>
     </div>

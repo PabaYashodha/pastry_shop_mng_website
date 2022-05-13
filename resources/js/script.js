@@ -17,12 +17,12 @@ $(document).ready(function () {
         "hideMethod": "fadeOut"
     }
     
- 
+   
 })
 
 
 let addToCart = (Id)=>{
-    $.post("../pages/sessionAction.php?addToCart",{foodItemId : Id},function(params) {
+    $.post("../pages/sessionAction.php",{foodItemId : Id},function(params) {
         if (params==1) {
             toastr.success("Item count increased");
         }
@@ -68,4 +68,8 @@ let decrease = (x)=>{
         total = total- unitPrice;
         $('#total').text(total.toFixed(2));
     }
+}
+
+let logout = ()=>{
+    
 }

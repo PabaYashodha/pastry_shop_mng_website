@@ -55,13 +55,14 @@ function newCustomer()
     if ($insertId >0) {
         $sql = "INSERT INTO `customer_login`(`customer_login_username`, `customer_login_password`,`customer_customer_id`) VALUES('$customerEmail','$confirmPassword','$insertId')";
         $result=$conn->query($sql) or die($conn->error);
-        if ($result>0) {
+        if ($result>0) { //success part
+            session_unset('otp');
             $msg = "New customer successfully inserted";
             $type = "Success";
             $array = array("type"=>$type, "msg"=>$msg);
             // session_start();
             $_SESSION['notify'] = $array;
-            header('location: ../pages/login.php');
+            header('location: ../pages/dashboard.php');
         }else{
             throw new Exception("Customer not inserted");
         }
@@ -69,13 +70,13 @@ function newCustomer()
         throw new Exception("Customer not inserted");
     }
 
-    } catch (Exception $th) {
+    } catch (Exception $th) { //error part
        $msg = $th->getMessage();
        $type = "Error";
        $array = array("type"=>$type, "msg"=>$msg);
             
-            $_SESSION['notify'] = $array;
-            header('location: register.php');
+       $_SESSION['notify'] = $array;
+       header('location: ../pages/register.php');
     }
     
     

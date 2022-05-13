@@ -13,7 +13,7 @@
 }
 
 .badge {
-  font-size: .55em !important;
+  font-size: 0.55em !important;
 }
 
 .image {
@@ -303,7 +303,7 @@
 .cake-card {
   padding-bottom: 22px;
   background-image: url("../img/ecliars.jpeg");
-  height: 40.80rem;
+  height: 40.8rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -355,7 +355,7 @@
 .coolDrink-card {
   padding-bottom: 22px;
   background-image: url("../img/cherry.jpg");
-  height: 40.80rem;
+  height: 40.8rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -373,7 +373,7 @@
 .hotDrink-card {
   padding-bottom: 22px;
   background-image: url("../img/tea.jpg");
-  height: 40.80rem;
+  height: 40.8rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -391,7 +391,7 @@
 .healthyBread-card {
   padding-bottom: 22px;
   background-image: url("../img/grain bread.jpeg");
-  height: 40.80rem;
+  height: 40.8rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -409,7 +409,7 @@
 .typicalBread-card {
   padding-bottom: 22px;
   background-image: url("../img/bread.jpg");
-  height: 40.80rem;
+  height: 40.8rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -433,12 +433,32 @@
 }
 
 .cart-header {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   color: #e69284;
 }
 
 .btnCartItemDelete {
   font-size: x-small;
   background-color: none !important;
+}
+
+.vl {
+  border-left: 2px solid #e69284;
+  height: 525px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.form-control:focus {
+  border-color: #e69284 !important;
+  -webkit-box-shadow: 0 0 0 0.25rem #f1c3bb !important;
+          box-shadow: 0 0 0 0.25rem #f1c3bb !important;
+}
+
+.btn-check:focus + .btn, .btn:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem #e69284 !important;
+          box-shadow: 0 0 0 0.25rem #e69284 !important;
 }
 /*# sourceMappingURL=style.css.map */

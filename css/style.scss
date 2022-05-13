@@ -1,17 +1,17 @@
-.navHeader{
+.navHeader {
   font-size: 1.2rem;
   //font-weight: bolder;
   font-family: "Roboto Mono", monospace;
 }
 .navbar-dark .navbar-nav .nav-link {
-  color:  #6a2216 !important;
+  color: #6a2216 !important;
 }
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #a93723 !important;
 }
 .badge {
-    font-size: .55em !important;
+  font-size: 0.55em !important;
 }
 .image {
   background-image: url("../img/pizza.jpg");
@@ -26,9 +26,9 @@
 }
 
 .btnOrder {
-  background-color:  #e69284;
+  background-color: #e69284;
   font-family: "Roboto Mono", monospace;
-  color:  #a93723;
+  color: #a93723;
   font-weight: bold;
   font-size: 1.5rem;
   border: none;
@@ -118,10 +118,10 @@
   margin: 10px;
 }
 #footer-content {
-    background: linear-gradient(to top, #e69284 0%, #f2c7c0 100%);
-    color: #6a2216;
+  background: linear-gradient(to top, #e69284 0%, #f2c7c0 100%);
+  color: #6a2216;
 }
-.itemTag{
+.itemTag {
   color: #ffffff !important;
   text-decoration: none !important;
 }
@@ -227,12 +227,12 @@
   font-weight: bold;
   font-size: 2rem;
   margin: auto;
-   //background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  //background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
-.cake-card{
-   padding-bottom: 22px;
+.cake-card {
+  padding-bottom: 22px;
   background-image: url("../img/ecliars.jpeg");
-  height: 40.80rem;
+  height: 40.8rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -241,33 +241,21 @@
   background-position: center;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
-.muffins-card{
-    background-image: url("img/muffins.jpeg");
-    height: 20rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-repeat: no-repeat !important;
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+.muffins-card {
+  background-image: url("img/muffins.jpeg");
+  height: 20rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
 
-.doughnut-card{
-    background-image: url("../img/doughnut.jpeg");
-    height: 20rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-repeat: no-repeat !important;
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-}
-.coolDrink-card{
-    padding-bottom: 22px;
-  background-image: url("../img/cherry.jpg");
-  height: 40.80rem;
+.doughnut-card {
+  background-image: url("../img/doughnut.jpeg");
+  height: 20rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -276,56 +264,68 @@
   background-position: center;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
-.hotDrink-card{
-    padding-bottom: 22px;
-    background-image: url("../img/tea.jpg");
-    height: 40.80rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-repeat: no-repeat !important;
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+.coolDrink-card {
+  padding-bottom: 22px;
+  background-image: url("../img/cherry.jpg");
+  height: 40.8rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
-.healthyBread-card{
-    padding-bottom: 22px;
-    background-image: url("../img/grain\ bread.jpeg");
-    height: 40.80rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-repeat: no-repeat !important;
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+.hotDrink-card {
+  padding-bottom: 22px;
+  background-image: url("../img/tea.jpg");
+  height: 40.8rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
-.typicalBread-card{
-    padding-bottom: 22px;
-    background-image: url("../img/bread.jpg");
-    height: 40.80rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-repeat: no-repeat !important;
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+.healthyBread-card {
+  padding-bottom: 22px;
+  background-image: url("../img/grain\ bread.jpeg");
+  height: 40.8rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
-.cart-btn{
-    background-color: #e69284 !important;
-    text-align: center;
-    height: 40px;
-    border: none;
-    color: #6a2216;
+.typicalBread-card {
+  padding-bottom: 22px;
+  background-image: url("../img/bread.jpg");
+  height: 40.8rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
-.cart-header{
-    font-family: 'Lobster', cursive;
-    color:  #e69284;
+.cart-btn {
+  background-color: #e69284 !important;
+  text-align: center;
+  height: 40px;
+  border: none;
+  color: #6a2216;
 }
-.btnCartItemDelete{
-    font-size: x-small;
-    background-color: none !important;
+.cart-header {
+  font-family: "Lobster", cursive;
+  color: #e69284;
+}
+.btnCartItemDelete {
+  font-size: x-small;
+  background-color: none !important;
 }
 // .login{
 //     background-image: url("../img/wallpapers.jpg");
@@ -335,3 +335,18 @@
 //     justify-content: center;
 //     align-items: center;
 // }
+.vl {
+  border-left: 2px solid #e69284;
+  height: 525px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+.form-control:focus {
+    border-color: #e69284 !important;
+    box-shadow: 0 0 0 0.25rem #f1c3bb !important;
+}
+.btn-check:focus+.btn, .btn:focus {
+    box-shadow: 0 0 0 0.25rem #e69284 !important;
+}
