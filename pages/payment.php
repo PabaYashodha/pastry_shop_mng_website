@@ -7,10 +7,10 @@ require_once '../pages/header.php';
         <div class="card" style="border: none;">
 
             <div class="row">
-                <form class="row g-3">
+                <form class="row g-3 needs-validation" method="post" enctype="multipart/form-data" action=""   >
                     <div class="col-12">
                         <label for="cardHolder'sName" class="form-label">Card Holder's Name</label>
-                        <input type="text" class="form-control" id="cardHolder'sName">
+                        <input type="text" class="form-control" id="cardHoldersName">
                     </div>
                     <div class="col-12">
                         <label for="cardNumber" class="form-label">Card Number</label>
@@ -22,17 +22,17 @@ require_once '../pages/header.php';
                     </div>
                     <div class="col-md-6">
                         <label for="cvc" class="form-label">CVC</label>
-                        <input type="number" class="form-control" id="cvc">
+                        <input type="number" pattern="[0-9]+" min="0" max="999" maxlength="3" class="form-control" id="cvc">
                     </div>
                     <div class="col-md-6">
-                        <label for="expireDate" class="form-label">Crd Expiry Date</label>
+                        <label for="expireDate" class="form-label">Card Expiry Date</label>
                         <input type="month" class="form-control" id="expireDate">
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="float-end d-inline-flex">
                             <a href="../pages/checkout.php" class="btn btn-danger">Cancel</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <button id="paymentForm" type="submit" class="btn btn-primary">Pay</button>
+                            <button id="paymentForm" type="button" class="btn btn-primary">Pay</button>
                         </div>
                     </div>
                 </form>

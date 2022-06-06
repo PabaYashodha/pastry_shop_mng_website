@@ -9,6 +9,9 @@ if (isset($_REQUEST['status']) ){
 }
 function newCustomer()
 {
+   // if (isset($_SESSION['otp'])) {
+       
+    
     try {
         $customerEmail = $_POST['customerEmail'];
         $confirmPassword = md5($_POST['confirmPassword']);
@@ -79,6 +82,6 @@ function newCustomer()
        header('location: ../pages/register.php');
     }
     
-    
+//}
     
 }

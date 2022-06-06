@@ -44,7 +44,7 @@ function customerLogin()
                     "customer_lname"=> $lastName,
                     "customer_id"=> base64_encode($Id)
                 );
-                $_SESSION['customer'] =$customerArray; //login session for customer
+                $_SESSION['customer'] =$customerArray; //login session for customer * session is a array thats why it was equal to array
 
                 $msg = "Successfully logged in";
                 $type ="Success";
@@ -113,4 +113,10 @@ function sendOTP()
     }else{
         
     }
+}
+
+function logout()
+{
+    unset($_SESSION['customer']);
+    header('location:../pages/index.php');
 }

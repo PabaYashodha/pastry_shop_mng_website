@@ -1,6 +1,7 @@
 <?php
-require_once '../pages/header.php';
 require_once '../handler/CartHandler.php';
+require_once '../pages/header.php';
+
 //session_start();
 // session_unset();
 if (!isset($_SESSION['customer'])) {
@@ -11,7 +12,7 @@ if (!isset($_SESSION['customer'])) {
     <section style="min-height: 100vh;">
 
         <div class="container p-o" style="margin-top: 100px;">
-            <form action="../handler/CheckoutHandler.php?status=orderPlacement" method="post" role="form" id="orderCustomerForm" class="mx-2 mt-1 needs-validation" novalidate>
+            <form action="../handler/OrderHandler.php?status=orderPlacement" method="post" role="form" id="orderCustomerForm" class="mx-2 mt-1 needs-validation" novalidate>
                 <div class="row">
                     <div class="col-sm-6">
                         <?php
@@ -101,40 +102,39 @@ if (!isset($_SESSION['customer'])) {
                             </thead>
                             <tbody style="height: 50vh !important; overflow-y: scroll;">
                                 <?php
+                                $count = 1;
                                 foreach ($_SESSION['shopping_cart'] as $value) { //access the shopping cart session
                                     $result = getFoodItemData($value['food_item_id']);
-                                    $total = 0;
-                                    $count = 1;
-                                    while ($data = $result->fetch_assoc()) {
-                                        $subTotal = $value['item_qty'] * $data['food_item_unit_price'];
-                                        $total +=$subTotal;
-                                ?> <tr>
-                                            <td scope="col"><?php echo $count ?></td>
-                                            <td scope="col"><?php echo $data['food_item_name'] ?></td>
-                                            <td scope="col"><?php echo $data['food_item_unit_price'] ?></td>
-                                            <td scope="col"><?php echo $value['item_qty'] ?></td>
-                                            <td scope="col"><?php echo ($value['item_qty'] * $data['food_item_unit_price']) ?>.00</td>
-                                        </tr>
+                                    $total = 0;                                    
+                                    $data = $result->fetch_assoc();
+                                    $subTotal = $value['item_qty'] * $data['food_item_unit_price'];
+                                    $total += $subTotal;                                        
+                                ?> 
+                                <tr>
+                                    <td scope="col"><?php echo $count ?></td>
+                                    <td scope="col"><?php echo $data['food_item_name'] ?></td>
+                                    <td scope="col"><?php echo $data['food_item_unit_price'] ?></td>
+                                    <td scope="col"><?php echo $value['item_qty'] ?></td>
+                                    <td scope="col"><?php echo ($value['item_qty'] * $data['food_item_unit_price']) ?>.00</td>
+                                </tr>
+                                <?php    
+                                $count++;                         
+                                }
+                                ?>
+                            </tbody>
                             <tfoot>
                                 <tr style="background-color: #e69284;">
                                     <td colspan="4" class="text-end">Total</td>
                                     <td><input type="hidden" name="total" value="<?php echo $total?>"><?php echo $total?>.00 </td>
                                 </tr>
                             </tfoot>
-
-                    <?php
-                                    }
-                                }
-                    ?>
-
-                    </tbody>
                         </table>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="float-end d-inline-flex">
-                            <a href="../pages/cart.php" class="btn btn-info">Add More Items</a>
+                            <a href="../pages/menu.php" class="btn btn-dark ">Add More Items</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <button id="orderCustomerFormSubmit" type="submit" class="btn btn-primary">Continue</button>
                         </div>

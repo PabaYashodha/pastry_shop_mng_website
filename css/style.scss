@@ -242,7 +242,7 @@
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
 .muffins-card {
-  background-image: url("img/muffins.jpeg");
+  background-image: url("../img/muffins.jpeg");
   height: 20rem;
   justify-content: center;
   align-items: center;
@@ -312,6 +312,56 @@
   background-position: center;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
+
+.savory-veg-card{
+    padding-bottom: 22px;
+    background-image: url("../img/samosa.jpg");
+    height: 40.8rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+.sweet-veg-card{
+    padding-bottom: 22px;
+    background-image: url("../img/sweet\ bun.jpg");
+    height: 40.8rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+.cakePiece-card{
+    padding-bottom: 22px;
+    background-image: url("../img/cakes\ pieces.jpg");
+    height: 40.8rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.icingCake-card{
+    padding-bottom: 22px;
+    background-image: url("../img/berryCake.jpeg");
+    height: 40.8rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
 .cart-btn {
   background-color: #e69284 !important;
   text-align: center;
@@ -346,7 +396,4 @@
 .form-control:focus {
     border-color: #e69284 !important;
     box-shadow: 0 0 0 0.25rem #f1c3bb !important;
-}
-.btn-check:focus+.btn, .btn:focus {
-    box-shadow: 0 0 0 0.25rem #e69284 !important;
 }

@@ -18,7 +18,7 @@ require_once '../pages/header.php';
                                 <input type="password" class="form-control rounded-pill" id="password" placeholder="Password" name="password">
                             </div>
                             <div class="d-grid">
-                                <button class="btn rounded-pill text-dark" style="background-color:#e69284 ;" type="submit">Login</button>
+                                <button class="btn rounded-pill text-dark" style="background-color:#e69284 ; box-shadow: 0 0 0 0.25rem #e69284 !important;" type="submit">Login</button>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ require_once '../pages/header.php';
                             </div>
 
                             <div class="d-grid">
-                                <button class="btn rounded-pill text-dark" style="background-color:#e69284 ;" type="submit">Send</button>
+                                <button class="btn rounded-pill text-dark" style="background-color:#e69284 ; box-shadow: 0 0 0 0.25rem #e69284 !important;" type="submit">Send</button>
                             </div>
                         </div>
                     </div>
