@@ -59,7 +59,7 @@ function newCustomer()
         $sql = "INSERT INTO `customer_login`(`customer_login_username`, `customer_login_password`,`customer_customer_id`) VALUES('$customerEmail','$confirmPassword','$insertId')";
         $result=$conn->query($sql) or die($conn->error);
         if ($result>0) { //success part
-            session_unset('otp');
+            unset($_SESSION['otp']);
             $msg = "New customer successfully inserted";
             $type = "Success";
             $array = array("type"=>$type, "msg"=>$msg);

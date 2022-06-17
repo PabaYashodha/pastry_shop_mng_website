@@ -34,7 +34,6 @@ require_once '../pages/header.php';
                                 <!-- <label for="username" class="form-label">Username</label> -->
                                 <input type="email" class="form-control rounded-pill" id="customerContact" name="customerContact" placeholder="email">
                             </div>
-
                             <div class="d-grid">
                                 <button class="btn rounded-pill text-dark" style="background-color:#e69284 ; box-shadow: 0 0 0 0.25rem #e69284 !important;" type="submit">Send</button>
                             </div>

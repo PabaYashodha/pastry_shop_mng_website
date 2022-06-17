@@ -90,7 +90,10 @@ let logout = ()=>{
         closeOnEsc: false,
     }).then((willOUT) => {
         if (willOUT) {
-            $.post('../handler/LoginHandler.php?status=logout')
+            $.post('../handler/LoginHandler.php?status=logout',function() {
+                location.reload();
+            });
+            
         } 
     })
 }

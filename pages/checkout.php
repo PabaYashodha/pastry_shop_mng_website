@@ -103,19 +103,19 @@ if (!isset($_SESSION['customer'])) {
                             <tbody style="height: 50vh !important; overflow-y: scroll;">
                                 <?php
                                 $count = 1;
+                                $total =  (int)0;
                                 foreach ($_SESSION['shopping_cart'] as $value) { //access the shopping cart session
-                                    $result = getFoodItemData($value['food_item_id']);
-                                    $total = 0;                                    
+                                    $result = getFoodItemData($value['food_item_id']);                                                                        
                                     $data = $result->fetch_assoc();
-                                    $subTotal = $value['item_qty'] * $data['food_item_unit_price'];
-                                    $total += $subTotal;                                        
+                                    $subTotal = ($value['item_qty'] * $data['food_item_unit_price']);
+                                    (int)$total = (int)$total + (int)$subTotal;                             
                                 ?> 
                                 <tr>
-                                    <td scope="col"><?php echo $count ?></td>
+                                    <td scope="col" style="height: 30px;"><?php echo $count ?></td>
                                     <td scope="col"><?php echo $data['food_item_name'] ?></td>
                                     <td scope="col"><?php echo $data['food_item_unit_price'] ?></td>
                                     <td scope="col"><?php echo $value['item_qty'] ?></td>
-                                    <td scope="col"><?php echo ($value['item_qty'] * $data['food_item_unit_price']) ?>.00</td>
+                                    <td scope="col"><?php echo $subTotal ?>.00</td>
                                 </tr>
                                 <?php    
                                 $count++;                         

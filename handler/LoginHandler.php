@@ -84,22 +84,26 @@ function sendOTP()
             <br>
             <h4>Notice:</h4>
             <br>
-            <h5>Use this as your 'Temporary Password'</h5>
-            
+            <h5>Use this as your 'Temporary Password'</h5>            
             <h5>This code will be expires after 90 min</h5>
         ";
         $mailSendResult = $mailObj->sendMail($customerContact, 'customer', $subject, $body);
+        $mailSendResult=1;
         if ($mailSendResult==1) {
+            
             $array = array(
                 "email" => $customerContact,
                 "otp" => md5($otp) ,
+                //"otp" => $otp,
             );
             $notifyArray = array(
-                "msg" => "Mail has been send",
+                "msg" => "Mail has been send Please check your index or spam",
                 "type" => "Success"
             );
+            
             $_SESSION['notify'] = $notifyArray;
             $_SESSION['otp'] = $array;
+            
             header("location:../pages/login.php");
         }else{
             $array = array(
@@ -118,5 +122,5 @@ function sendOTP()
 function logout()
 {
     unset($_SESSION['customer']);
-    header('location:../pages/index.php');
+    //header('location:../pages/index.php');
 }
